@@ -21,12 +21,12 @@ Esto es una solución de la [Stats preview card component challenge on Frontend 
 
 ### Screenshot
 
-![]()
+![](https://github.com/GarciaRojasP/start-preview-card/assets/119550417/e719d84e-f07f-4bea-8d22-1527c14e7b59)
 
 ### Links
 
-- Ver código: [Stats preview card]()
-- Ver demo: [Stats preview card]()
+- Ver código: [Stats preview card](https://github.com/GarciaRojasP/start-preview-card)
+- Ver demo: [Stats preview card](https://start-preview-card-teal.vercel.app/)
 
 ## Mi proceso
 
