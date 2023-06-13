@@ -1,0 +1,167 @@
+:root{
+
+    /*==================== COLOR PRIMARY ====================*/
+    --very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --soft-violet-accent: hsl(277, 64%, 61%);
+
+    /*==================== COLOR NEUTRAL ====================*/
+    --white-main-heading-stats: hsl(0, 0%, 100%);
+    --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+    
+    /*==================== TYPOGRAPHY ====================*/
+    --body: 'Lexend Deca', sans-serif;
+    --heading: 'Inter', sans-serif;
+
+    /*==================== FONT ====================*/
+    --font-small: 14px;
+    --font-normal: 16px;
+
+    /*==================== FONT WEIGHT ====================*/
+    ---w-regular: 400;
+    --w-bold: 700; 
+
+    /*==================== lINE HEIGHT ====================*/
+    --line-height: 1.5;
+
+}
+
+/*==================== STYLE GENERAL ====================*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2{
+    margin:0;
+}
+
+body{
+    font-family: var(--body);
+    font-size: var(--font-normal);
+    line-height: var(--line-height);
+    background-color: var(--very-dark-blue-main-background);
+    color: var(--slightly-transparent-white-main-paragraph);
+    font-weight: var(---w-regular);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+/*==================== CARD ====================*/
+.card{
+    gap:0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 95%;
+    max-width: 330px;
+    margin: 2rem auto;
+    background-color: var(--dark-desaturated-blue-card-background);
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    animation: fade 0.8s 0.6s both ease-in;
+    -webkit-animation: fade 0.8s 0.6s both ease-in;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.card__img{
+    background-color: var(--soft-violet-accent);
+    width: 100%;
+    height: 100%;
+}
+
+.card__img-bg{
+    display: block;
+    width: 100%;
+    mix-blend-mode: multiply;
+    filter: contrast(0.60);
+    -webkit-filter: contrast(0.60);
+}
+
+.card__texts{
+    padding: 1.5em;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card__title{
+    color: var(--white-main-heading-stats);
+    font-size: 1.5rem;
+}
+
+.insights{
+    color: var(--soft-violet-accent);
+}
+
+.card__datas{
+    margin: 1rem 0;
+    flex-direction: column;
+}
+
+.card__number{
+    font-weight: var(--w-bold);
+    font-size: 1.3rem;
+    font-family: var(--heading);
+    color: var(--white-main-heading-stats);
+}
+
+.card__name{
+    text-transform: uppercase;
+    font-size: var(--font-small);
+    color: var(--slightly-transparent-white-stat-headings);
+    font-weight: var(---w-regular);
+}
+
+@media screen and (min-width:1000px) {
+    .card{
+        max-width: 1024px;
+        flex-direction: row-reverse;
+    }
+
+    .card__img{
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .card__texts{
+        width: 50%;
+        padding: 2em 4em;
+        text-align: left;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .card__title{
+        font-size: 1.8rem;
+    }
+
+    .card__datas{
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
